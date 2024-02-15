@@ -1,6 +1,4 @@
-﻿CREATE DATABASE MVPHBA
-GO
-CREATE PROCEDURE [dbo].[Sp_PropertyInfoListGet]
+﻿CREATE PROCEDURE [dbo].[Sp_PropertyInfoListGet]
 (
 	@displayStart INT,
 	@displayLength INT,
