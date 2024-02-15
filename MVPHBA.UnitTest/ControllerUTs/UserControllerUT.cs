@@ -67,5 +67,15 @@ namespace MVP_HBA.UnitTest.ControllerUTs
             var resp = okObjResult.Value as ResponseVM;
             Assert.IsTrue(resp.Status == "99" || resp.Status == "00");
         }
+        [TestMethod]
+        public async Task UserTypeListGetTM()
+        {
+            UserController userController = new UserController(_userManagerMock.Object, _mapperMock.Object, _signInManagerMock.Object, _iconfigurationMock.Object);
+            var result = userController.UserTypeListGet();
+            Assert.IsTrue(result is OkObjectResult);
+            var okObjResult = result as OkObjectResult;
+            var resp = okObjResult.Value as ResponseVM;
+            Assert.IsTrue(resp.Status == "99" || resp.Status == "00");
+        }
     }
 }

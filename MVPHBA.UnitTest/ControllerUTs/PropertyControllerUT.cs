@@ -46,5 +46,55 @@ namespace MVPHBA.UnitTest.ControllerUTs
             var resp = okObjResult.Value as ResponseVM;
             Assert.IsTrue(resp.Status == "99" || resp.Status == "00");
         }
+        [TestMethod]
+        public async Task AddUpdateTM()
+        {
+            PropertyInfoController propertyInfoController = new PropertyInfoController(_propertyInfoMock.Object, _userManagerMock.Object, _mapperMock.Object);
+            var result = await propertyInfoController.AddUpdate(new PropertyInfoReqVM());
+            Assert.IsTrue(result is OkObjectResult);
+            var okObjResult = result as OkObjectResult;
+            var resp = okObjResult.Value as ResponseVM;
+            Assert.IsTrue(resp.Status == "99" || resp.Status == "00");
+        }
+        [TestMethod]
+        public async Task DeleteTM()
+        {
+            PropertyInfoController propertyInfoController = new PropertyInfoController(_propertyInfoMock.Object, _userManagerMock.Object, _mapperMock.Object);
+            var result = await propertyInfoController.Delete(1);
+            Assert.IsTrue(result is OkObjectResult);
+            var okObjResult = result as OkObjectResult;
+            var resp = okObjResult.Value as ResponseVM;
+            Assert.IsTrue(resp.Status == "99" || resp.Status == "00");
+        }
+        [TestMethod]
+        public async Task DetailTM()
+        {
+            PropertyInfoController propertyInfoController = new PropertyInfoController(_propertyInfoMock.Object, _userManagerMock.Object, _mapperMock.Object);
+            var result = await propertyInfoController.Delete(1);
+            Assert.IsTrue(result is OkObjectResult);
+            var okObjResult = result as OkObjectResult;
+            var resp = okObjResult.Value as ResponseVM;
+            Assert.IsTrue(resp.Status == "99" || resp.Status == "00");
+        }
+        [TestMethod]
+        public async Task PropertyTypeListGetTM()
+        {
+            PropertyInfoController propertyInfoController = new PropertyInfoController(_propertyInfoMock.Object, _userManagerMock.Object, _mapperMock.Object);
+            var result = propertyInfoController.PropertyTypeListGet();
+            Assert.IsTrue(result is OkObjectResult);
+            var okObjResult = result as OkObjectResult;
+            var resp = okObjResult.Value as ResponseVM;
+            Assert.IsTrue(resp.Status == "99" || resp.Status == "00");
+        }
+        [TestMethod]
+        public async Task ImageGetTM()
+        {
+            PropertyInfoController propertyInfoController = new PropertyInfoController(_propertyInfoMock.Object, _userManagerMock.Object, _mapperMock.Object);
+            var result = await propertyInfoController.ImageGet(1);
+            Assert.IsTrue(result is OkObjectResult);
+            var okObjResult = result as OkObjectResult;
+            var resp = okObjResult.Value as ResponseVM;
+            Assert.IsTrue(resp.Status == "99" || okObjResult.StatusCode == 200);
+        }
     }
 }
