@@ -21,4 +21,10 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MVPHBA.Common\MVPHBA.Common.csproj" />
+    <ProjectReference Include="..\MVPHBA.DataAccess\MVPHBA.DataAccess.csproj" />
+    <ProjectReference Include="..\MVPHBA.Model\MVPHBA.Model.csproj" />
+  </ItemGroup>
+
 </Project>

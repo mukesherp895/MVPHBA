@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <InvariantGlobalization>true</InvariantGlobalization>
+    <InvariantGlobalization>false</InvariantGlobalization>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,6 +27,13 @@
     <PackageReference Include="Microsoft.Identity.Web" Version="2.15.2" />
     <PackageReference Include="Microsoft.Identity.Web.DownstreamApi" Version="2.15.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MVPHBA.Common\MVPHBA.Common.csproj" />
+    <ProjectReference Include="..\MVPHBA.DataAccess\MVPHBA.DataAccess.csproj" />
+    <ProjectReference Include="..\MVPHBA.Model\MVPHBA.Model.csproj" />
+    <ProjectReference Include="..\MVPHBA.Service\MVPHBA.Service.csproj" />
   </ItemGroup>
 
 </Project>

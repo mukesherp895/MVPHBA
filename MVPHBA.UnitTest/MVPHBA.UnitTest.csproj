@@ -29,4 +29,12 @@
     <PackageReference Include="coverlet.collector" Version="6.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MVPHBA.Common\MVPHBA.Common.csproj" />
+    <ProjectReference Include="..\MVPHBA.DataAccess\MVPHBA.DataAccess.csproj" />
+    <ProjectReference Include="..\MVPHBA.Model\MVPHBA.Model.csproj" />
+    <ProjectReference Include="..\MVPHBA.Service\MVPHBA.Service.csproj" />
+    <ProjectReference Include="..\MVPHBA.WebAPI\MVPHBA.WebAPI.csproj" />
+  </ItemGroup>
+
 </Project>
