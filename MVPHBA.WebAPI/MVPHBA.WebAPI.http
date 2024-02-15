@@ -1,0 +1,6 @@
+@MVPHBA.WebAPI_HostAddress = http://localhost:5110
+
+GET {{MVPHBA.WebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
