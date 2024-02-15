@@ -19,8 +19,8 @@ namespace MVPHBA.DataAccess.DBModelConfigurations
             builder.Property(p => p.ImagePath).IsRequired().HasMaxLength(255).HasColumnType("varchar");
             builder.Property(p => p.Feature).IsRequired().HasMaxLength(500).HasColumnType("varchar");
             builder.Property(p => p.Price).IsRequired().HasColumnType("decimal(18,2)");
-            builder.Property(p => p.UserId).IsRequired().HasMaxLength(450).HasColumnType("nvarchar");
-            builder.HasOne(h => h.User).WithMany().HasForeignKey(fk => fk.UserId).OnDelete(DeleteBehavior.NoAction);
+            builder.Property(p => p.BrokerId).IsRequired().HasMaxLength(450).HasColumnType("nvarchar");
+            builder.HasOne(h => h.Broker).WithMany().HasForeignKey(fk => fk.BrokerId).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

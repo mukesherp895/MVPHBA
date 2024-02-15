@@ -4,18 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MVPHBA.Model.DBModels
+namespace MVPHBA.Model.ViewModels
 {
-    public class PropertyInfos
+    public class PropertyInfoListVM
     {
-        public long Id { get; set; }
+        public long RowNum { get; set; }
+        public int RecCount { get; set; }
+        public int Id { get; set; }
         public string PropertyType { get; set; }
         public string Description { get; set; }
         public string Location { get; set; }
-        public string ImagePath { get; set; }
+        public string ImageUrl { get; set; }
         public decimal Price { get; set; }
         public string Feature { get; set; }
-        public string BrokerId { get; set; }
-        public virtual Users Broker { get; set; }
     }
 }

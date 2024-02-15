@@ -1,12 +1,13 @@
-﻿using System;
+﻿using MVPHBA.Model.DBModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MVPHBA.Model.DBModels
+namespace MVPHBA.Model.ViewModels
 {
-    public class PropertyInfos
+    public class PropertyDetailVM
     {
         public long Id { get; set; }
         public string PropertyType { get; set; }
@@ -15,7 +16,7 @@ namespace MVPHBA.Model.DBModels
         public string ImagePath { get; set; }
         public decimal Price { get; set; }
         public string Feature { get; set; }
-        public string BrokerId { get; set; }
-        public virtual Users Broker { get; set; }
+        public string BrokerName { get; set; }
+        public string BrokerContactNo { get; set; }
     }
 }
